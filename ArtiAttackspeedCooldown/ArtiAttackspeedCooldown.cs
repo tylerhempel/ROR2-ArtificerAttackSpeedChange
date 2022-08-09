@@ -27,8 +27,8 @@ namespace ArtiAttackspeedCooldown
         //The Plugin GUID should be a unique ID for this plugin, which is human readable (as it is used in places like the config).
         //If we see this PluginGUID as it is on thunderstore, we will deprecate this mod. Change the PluginAuthor and the PluginName !
         public const string PluginGUID = PluginAuthor + "." + PluginName;
-        public const string PluginAuthor = "Anon232";
-        public const string PluginName = "ArtiAttackspeedCooldown";
+        public const string PluginAuthor = "Tyloo";
+        public const string PluginName = "ArtificerAttackSpeedChange";
         public const string PluginVersion = "1.0.0";
 
         //The Awake() method is run at the very start when the game is initialized.
@@ -57,19 +57,11 @@ namespace ArtiAttackspeedCooldown
             {
                 if (body.skillLocator.primary)
                 {
-                    body.skillLocator.primary.cooldownScale /= (body.attackSpeed * 0.75f);
+                    body.skillLocator.primary.cooldownScale /= (body.attackSpeed * 1.0f);
                 }
                 if (body.skillLocator.secondary)
                 {
-                    body.skillLocator.secondary.cooldownScale /= (body.attackSpeed * 0.75f);
-                }
-                if (body.skillLocator.utility)
-                {
-                    body.skillLocator.utility.cooldownScale /= (body.attackSpeed * 0.75f);
-                }
-                if (body.skillLocator.special)
-                {
-                    body.skillLocator.special.cooldownScale /= (body.attackSpeed * 0.75f);
+                    body.skillLocator.secondary.cooldownScale /= (body.attackSpeed * 0.5f);
                 }
             }
         }
