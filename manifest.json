@@ -1,8 +1,8 @@
 ﻿{
-	"name": "ArtiAttackspeedCooldown",
+	"name": "ArtificerAttackSpeedChange",
 	"version_number": "1.0.0",
 	"website_url": "",
-	"description": "Scales Artificers cooldowns to 75% of attackspeed.",
+	"description": "Scales Artificer's Primary and Secondary cooldowns to her attack speed.",
 	"dependencies": [
 		"bbepis-BepInExPack-5.4.9",
 		"RiskofThunder-HookGenPatcher-1.2.1"
